@@ -1,4 +1,4 @@
-# Testing an activity in Android Studio toturial sample code.
+# Testing an activity in Android Studio tutorial sample code.
 
 This is a sample code for [Testing activity in Android Studio.](http://evgenii.com/blog/testing-activity-in-android-studio-tutorial-part-1/) tutorial.
 
