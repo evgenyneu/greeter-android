@@ -5,4 +5,9 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
     public MainActivityTests() {
         super(MainActivity.class);
     }
+
+    public void testActivityExists() {
+        MainActivity activity = getActivity();
+        assertNotNull(activity);
+    }
 }
