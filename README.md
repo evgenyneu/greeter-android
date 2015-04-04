@@ -6,9 +6,18 @@ This is a sample code for [Testing activity in Android Studio](http://evgenii.co
 
 ## Setup
 
+Clone this repository.
 
+```
+git clone git@github.com:evgenyneu/greeter-android.git
+```
 
-## Create test configuration
+## How to run the tests
+
+* In your project window expand app > java folders.
+* You will see two packages with the same name com.mycompany.greeter. The second one will have (androidTest). Right-click on that one.
+* Select Run > Tests in 'com.mycomp... from the context menu.
+* Select your device or emulator in the next dialog and it will run the tests.
 
 <img src='https://raw.githubusercontent.com/evgenyneu/greeter-android/master/graphics/0200_create_test_configuration_in_android_studio.png' alt='Create test configuration' width='540'>
 
