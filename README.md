@@ -4,15 +4,13 @@ This is a sample code for [Testing activity in Android Studio](http://evgenii.co
 
 <img src='https://raw.githubusercontent.com/evgenyneu/greeter-android/master/graphics/0100_finished_app_screen.png' alt='Greeter android app' width='540'>
 
-## Setup
-
-Clone this repository.
+## Clone this repository
 
 ```
 git clone git@github.com:evgenyneu/greeter-android.git
 ```
 
-## How to run the tests
+## Run the tests
 
 * In your project window expand **app > java** folders.
 * You will see two packages with the same name **com.mycompany.greeter**. The second one will have **(androidTest)**. Right-click on that one.
