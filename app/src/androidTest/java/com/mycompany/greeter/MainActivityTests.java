@@ -1,4 +1,8 @@
 package com.mycompany.greeter;
+import android.test.ActivityInstrumentationTestCase2;
 
-public class MainActivityTests {
+public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActivity> {
+    public MainActivityTests() {
+        super(MainActivity.class);
+    }
 }
