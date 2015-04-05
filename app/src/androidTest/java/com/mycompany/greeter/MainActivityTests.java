@@ -21,7 +21,8 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         // Type name in text input
         // ----------------------
 
-        final EditText nameEditText = (EditText) activity.findViewById(R.id.greet_edit_text);
+        final EditText nameEditText =
+                (EditText) activity.findViewById(R.id.greet_edit_text);
 
         // Send string input value
         getInstrumentation().runOnMainSync(new Runnable() {
@@ -38,13 +39,17 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         // Tap "Greet" button
         // ----------------------
 
-        Button greetButton = (Button) activity.findViewById(R.id.greet_button);
+        Button greetButton =
+                (Button) activity.findViewById(R.id.greet_button);
+
         TouchUtils.clickView(this, greetButton);
 
         // Verify greet message
         // ----------------------
 
-        TextView greetMessage = (TextView) activity.findViewById(R.id.message_text_view);
+        TextView greetMessage =
+                (TextView) activity.findViewById(R.id.message_text_view);
+
         String actualText = greetMessage.getText().toString();
         assertEquals("Hello, Jake!", actualText);
     }
