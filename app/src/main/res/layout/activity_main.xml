@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/greet_edit_text"
         android:layout_centerHorizontal="true"
-        android:onClick="didTapGreetButton"/>
+        android:onClick="didTapGreetButton" />
 
     <TextView
         android:id="@+id/message_text_view"
@@ -30,6 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/greet_button"
         android:gravity="center"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
 </RelativeLayout>

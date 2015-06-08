@@ -1,10 +1,14 @@
 package com.mycompany.greeter;
+
 import android.test.ActivityInstrumentationTestCase2;
+import android.widget.EditText;
 import android.test.TouchUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Created by evgenii on 8/06/2015.
+ */
 public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActivity> {
     public MainActivityTests() {
         super(MainActivity.class);
@@ -47,9 +51,7 @@ public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActi
         // Verify greet message
         // ----------------------
 
-        TextView greetMessage =
-                (TextView) activity.findViewById(R.id.message_text_view);
-
+        TextView greetMessage = (TextView) activity.findViewById(R.id.message_text_view);
         String actualText = greetMessage.getText().toString();
         assertEquals("Hello, Jake!", actualText);
     }

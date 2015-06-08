@@ -17,7 +17,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -41,11 +40,15 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void didTapGreetButton(View view) {
-        EditText greetEditText = (EditText) findViewById(R.id.greet_edit_text);
+        EditText greetEditText =
+                (EditText) findViewById(R.id.greet_edit_text);
+
         String name = greetEditText.getText().toString();
         String greeting = String.format("Hello, %s!", name);
 
-        TextView messageTextView = (TextView) findViewById(R.id.message_text_view);
+        TextView messageTextView =
+                (TextView) findViewById(R.id.message_text_view);
+
         messageTextView.setText(greeting);
     }
 }
