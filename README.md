@@ -17,5 +17,5 @@ git clone git@github.com:evgenyneu/greeter-android.git
 * Select **Run > Tests in 'com.mycomp...** from the context menu, the one with green Android robot icon.
 * Select your device or emulator in the next dialog and it will run the tests.
 
-<img src='https://raw.githubusercontent.com/evgenyneu/greeter-android/master/graphics/0200_create_test_configuration_in_android_studio_2.png' alt='Run the tests'>
+<img src='https://raw.githubusercontent.com/evgenyneu/greeter-android/master/graphics/0200_create_test_configuration_in_android_studio_2.png' alt='Run the tests' width='500'>
 
