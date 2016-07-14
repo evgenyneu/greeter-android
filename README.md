@@ -12,6 +12,7 @@ git clone git@github.com:evgenyneu/greeter-android.git
 
 ## Run the tests
 
+* Open the project in Android Studio.
 * In your project window expand **app > java** folders.
 * You will see two packages with the same name **com.mycompany.greeter**. The second one will have **(androidTest)**. Right-click on that one.
 * Select **Run > Tests in 'com.mycomp...** from the context menu, the one with green Android robot icon.
