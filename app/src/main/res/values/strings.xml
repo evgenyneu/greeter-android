@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Greeter</string>
-    <string name="action_settings">Settings</string>
-    <string name="greet_button">Greet</string>
+    <string name="greetButton">Greet</string>
 </resources>
