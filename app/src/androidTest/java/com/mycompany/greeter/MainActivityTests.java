@@ -1,54 +1,31 @@
 package com.mycompany.greeter;
-import android.test.ActivityInstrumentationTestCase2;
-import android.widget.EditText;
-import android.test.TouchUtils;
-import android.widget.Button;
-import android.widget.TextView;
+import android.support.test.rule.ActivityTestRule;
+import android.support.test.runner.AndroidJUnit4;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
 
-public class MainActivityTests extends ActivityInstrumentationTestCase2<MainActivity> {
-    public MainActivityTests() {
-        super(MainActivity.class);
-    }
+@RunWith(AndroidJUnit4.class)
+public class MainActivityTests {
+    @Rule
+    public ActivityTestRule<MainActivity> mActivityRule
+            = new ActivityTestRule<>(MainActivity.class);
 
-    public void testActivityExists() {
-        MainActivity activity = getActivity();
-        assertNotNull(activity);
-    }
-
+    @Test
     public void testGreet() {
-        MainActivity activity = getActivity();
+        onView(withId(R.id.greetEditText))
+                .perform(typeText("Jake"), closeSoftKeyboard());
 
-        // Type name in text input
-        // ----------------------
+        onView(withText("Greet")).perform(click());
 
-        final EditText nameEditText =
-                (EditText) activity.findViewById(R.id.greet_edit_text);
-
-        // Send string input value
-        getInstrumentation().runOnMainSync(new Runnable() {
-            @Override
-            public void run() {
-                nameEditText.requestFocus();
-            }
-        });
-
-        getInstrumentation().waitForIdleSync();
-        getInstrumentation().sendStringSync("Jake");
-        getInstrumentation().waitForIdleSync();
-
-        // Tap "Greet" button
-        // ----------------------
-
-        Button greetButton =
-                (Button) activity.findViewById(R.id.greet_button);
-
-        TouchUtils.clickView(this, greetButton);
-
-        // Verify greet message
-        // ----------------------
-
-        TextView greetMessage = (TextView) activity.findViewById(R.id.message_text_view);
-        String actualText = greetMessage.getText().toString();
-        assertEquals("Hello, Jake!", actualText);
+        onView(withId(R.id.messageTextView))
+                .check(matches(withText("Hello, Jake!")));
     }
 }
